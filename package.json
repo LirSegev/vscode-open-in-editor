@@ -12,7 +12,18 @@
 		"*"
 	],
 	"main": "./out/extension.js",
-	"contributes": {},
+	"contributes": {
+		"configuration": {
+			"title": "Open In Editor",
+			"properties": {
+				"openInEditor.port": {
+					"type": "number",
+					"default": 27182,
+					"description": "Port used to communicate with chrome"
+				}
+			}
+		}
+	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
